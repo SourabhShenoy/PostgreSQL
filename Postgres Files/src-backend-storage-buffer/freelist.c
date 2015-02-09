@@ -181,6 +181,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 	 * individual buffer spinlocks, so it's OK to manipulate them without
 	 * holding the spinlock.
 	 */
+
 	while (StrategyControl->firstFreeBuffer >= 0)
 	{
 		buf = &BufferDescriptors[StrategyControl->firstFreeBuffer];
